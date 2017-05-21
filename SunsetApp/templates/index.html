@@ -1,0 +1,301 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "img/apple-icon.png" %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Sunset Technologies</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/gaia.css' %}" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'css/fonts/pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <script src="   {% static 'jquery-1.10.2.js' %}" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+    $("#log").load("/login");
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar bar1"></span>
+                    <span class="icon-bar bar2"></span>
+                    <span class="icon-bar bar3"></span>
+                </button>
+                <a href="#!" class="navbar-brand">
+                    Sunset Technologies
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-uppercase">
+                    <li>
+                        <a href="#" class="btn btn-danger btn-fill" data-toggle="modal" data-target="#myModal">Login</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 id="login">Login</h4>
+                              </div>
+                              <div class="modal-body" id="log">
+                                
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary"><a href="file:///C:/Users/Telmex/Desktop/WEB/Nueva%20carpeta/gaia-bootstrap-template/registro.html">Enviar</a></button>
+
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="section section-header">
+        <div class="parallax filter filter-color-red">
+            <div class="image"
+                style="background-image: {% static "img/header-1.jpeg" %}">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="title-area">
+                        <h1 class="title-modern">Sunset Technologies</h1>
+                        <h3>"A new way to set light"</h2>
+                        <div class="separator line-separator">♦</div>
+                    </div>
+
+                    <div class="button-get-started">
+                        <!-- Button trigger modal -->
+                    <button id="registro" type="button" class="btn btn-danger btn-fill" data-toggle="modal" data-target="#myModal">
+                      Regístrate
+                    </button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 id="registrate">Regístrate</h4>
+      </div>
+      <div class="modal-body">
+        <form class="navbar-form navbar-left" role="registro">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="nombre">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="apellido">
+          </div>
+          <div class="form-group">
+        <input type="text" class="form-control" placeholder="username">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="contraseña">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary"><a href="#">Guardar</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="title-area">
+                    <h2>¿Quiénes somos?</h2>
+                    <div class="separator separator-danger">✻</div>
+                    <p id="descripcion" class="description">Nuestro grupo ofrece una propuesta de sustentabilidad ambiental que busca el aprovechamiento de la radiación solar para su conversión en energía eléctrica, empleando celdas fotovoltaicas implementadas en puntos estratégicos del edificio a tratar. Nuestra tecnología se basa en la introducción de IoT lo que permite que el usuario tenga un mayor control en la movilidad del panel adecuándolo a sus necesidades y requerimientos, lo que favorece un incremento en el rendimiento de los paneles alargando su tiempo de vida y, a su vez, de energía eléctrica.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section-our-team-freebie">
+        <div class="parallax filter filter-color-black">
+            <div class="image" style="background-image:{% static "img/header-2.jpeg" %}">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="title-area">
+                            <h2>Sectores de aplicación</h2>
+                            <div class="separator separator-danger">✻</div>
+                            <p class="description">Nuestros productos van dirigidos a distintos sectores:</p>
+                        </div>
+                    </div>
+
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="{% static "img/faces/face_1.jpg" %}"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Comercial</h3>
+                                                    <p class="description">Hoteles, negocios, escuelas, parques</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="{% static "img/faces/face_4.jpg" %}"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Residencial</h3>
+                                                    <p class="description">Adaptable para todo tipo de residencia.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="{% static "img/faces/face_3.jpg" %}"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Empresarial</h3>
+                                                    <p class="description">Adaptable para todo tipo de empresa</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section-our-clients-freebie">
+        <div class="container">
+            <div class="title-area">
+                <h2>Misión</h2>
+                <p></p>
+                <div class="separator separator-danger">∎</div>
+                <p id="mision">Sunset Technologies innova en el mercado de los paneles solares implementando nuevas características que le dan mayor acercamiento al usuario, lo que permite prolongar el tiempo de vida de nuestros dispositivos, así como de su calidad.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section-small section-get-started">
+        <div class="parallax filter">
+            <div class="image" style="background-image: {% static "img/office-1.jpeg" %}">
+            </div>
+            <div class="container">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-our-clients-freebie">
+        <div class="container">
+            <div class="title-area">
+                <h2>Visión</h2>
+                <p></p>
+                <div class="separator separator-danger">∎</div>
+                <p id="mision">Sunset Technologies busca ampliar el mercado de los paneles solares a una mayor cantidad de usuarios, garantizando una mayor confiabilidad en esta fuente de generación de energía con el objetivo de aportar al desarrollo sostenible de las ciudades del futuro.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-small section-get-started">
+        <div class="parallax filter">
+            <div class="image" style="background-image: url('assets/img/office-1.jpeg')">
+            </div>
+            <div class="container">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="title-area">
+                    <h2>¿Qué nos hace diferentes de la competencia?</h2>
+                    <div class="separator separator-danger">✻</div>
+                    <p id="descripcion" class="description">Tecnología IoT que le permite al usuario personalizar el comportamiento de la celda según le parezca conveniente, seleccionando horarios ya sea preestablecidos (según zonas horarias) o caracterizados por el usuario.</p>
+                    <p id="descripcion" class="description">La búsqueda climatológica para el área de aplicación asegura el mayor aprovechamiento de la radiación solar.</p>
+                    <p id="descripcion" class="description">Nuestro sistema implementa la biomimética de las hojas de los árboles en las células fotovoltaicas adaptando el punto con la mejor orientación e inclinación posible, capaz de captar la mayor cantidad de energía solar.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <footer class="footer footer-big footer-color-black" data-color="black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Sunset Technologies</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                 © <script> document.write(new Date().getFullYear()) </script> Creative Tim, made with love
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<!--   core js files    -->
+<script src="{% static "js/jquery.min.js" %}" type="text/javascript"></script>
+<script src="{% static "js/bootstrap.js" %}" type="text/javascript"></script>
+
+<!--  js library for devices recognition -->
+<script type="text/javascript" src="{% static "js/modernizr.js" %}"></script>
+
+<!--  script for google maps   -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
+<script type="text/javascript" src="{% static "js/gaia.js" %}"></script>
+
+</html>

@@ -1,0 +1,129 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Basic Form</title>
+
+	<link rel="stylesheet" href="{% static 'css/demo.css' %}">
+	<link rel="stylesheet" href="{% static 'css/form-basic.css' %}">
+
+<STYLE TYPE="text/css">
+body{
+    background-color: pink;
+}
+
+</STYLE>
+</head>
+
+
+
+    <div class="main-content">
+
+        <!-- You only need this form and the form-basic.css -->
+
+        <form  enctype="multipart/form-data" class="form-basic" method="post" action="#">
+{% csrf_token %}
+            <div class="form-title-row">
+                <h1>Registro de Empresa</h1>
+            </div>
+            La comida no se tira. ¿Estas listo para ayudar?
+<br><br>
+            <div class="form-row">
+                <label>
+                    <span>Nombre</span>
+                    {{ form.first_name.errors}}
+                    {{ form.first_name}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Apellido</span>
+                    {{ form.last_name.errors}}
+                    {{ form.last_name}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>e-mail</span>
+                    {{ form.email.errors}}
+                    {{ form.email}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Telefono</span>
+                    {{ form.telefono.errors}}
+                    {{ form.telefono}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Nombre del responsable</span>
+                    {{ form.nombreres.errors}}
+                    {{ form.nombreres}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Justificacion</span>
+                    {{ form.justificacion.errors}}
+                    {{ form.justificacion}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Nombrbe de la sucursal</span>
+                    {{ form.nombresuc.errors}}
+                    {{ form.nombresuc}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Contraseña</span>
+                    {{ form.password1.errors}}
+                    {{ form.password1}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Confirmar contraseña</span>
+                    {{ form.password2.errors}}
+                    {{ form.password2}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>ciudad</span>
+                    {{ form.city.errors}}
+                    {{ form.city}}
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>direccion</span>
+                    {{ form.location.errors}}
+                    {{ form.location}}
+                </label>
+            </div>
+
+            
+
+            <div class="form-row">
+                <button type="submit">Enviar</button>
+            </div>
+            
+            
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

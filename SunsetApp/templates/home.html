@@ -1,0 +1,97 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "img/apple-icon.png" %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Sunset Technologies</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/gaia.css' %}" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'css/fonts/pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <script src="   {% static 'jquery-1.10.2.js' %}" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+    $("#log").load("/login");
+    </script>
+</head>
+
+<body>
+	<div class="section section-our-team-freebie">
+        <div class="parallax filter filter-color-black">
+            <div class="image" style="background-image:{% static "img/header-2.jpeg" %}">
+            </div>
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="title-area">
+                            <h2>Perfil de: maumg1196</h2>
+                            <div class="separator separator-danger">✻</div>
+                            <p class="description">Aqui podrás tener toda la información sobre tus edificios</p>
+                        </div>
+                    </div>
+
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="{% static "img/faces/face_1.jpg" %}"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Edificio 2</h3>
+                                                    <p class="description">El clima de esta zona es: Lluvioso</p>
+                                                    <p class="description">PANELES APAGADOS</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="{% static "img/faces/face_4.jpg" %}"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Mi casa</h3>
+                                                    <p class="description">EL clima en esta zon es: Nublado</p>
+                                                    <p class="description">PANELES ENCENDIDOS</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="{% static "img/faces/face_3.jpg" %}"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Edificio 2</h3>
+                                                    <p class="description">El clima en está zona es: Soleado</p>
+                                                    <p class="description">PANELES ENCENDIDOS</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
